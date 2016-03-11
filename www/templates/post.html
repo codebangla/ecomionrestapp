@@ -4,18 +4,18 @@
         
       </ion-nav-buttons> 
   <ion-content>
-    
       <div class="">
       
         <div>
+		<ion-scroll zooming="true" direction="xy" scrollbar-x="false" scrollbar-y="false" min-zoom="1" id="scrolly"  style="width: 100%; height: 100%;">
             <img class="featured_img" ng-src="{{singlePost.better_featured_image.media_details.sizes.medium_large.source_url}}" width="100%" height="auto">
-            
+        </ion-scroll>    
           </div> 
       
           <div class="card item-text-wrap">
               
             <div class="item">
-                <p style="font-style:italic; margin-bottom:10px;"><small>{{singlePost.date | fromNow}}</small></p>
+                <p style="font-style:bold; margin-bottom:10px;"><b> &#x9f3; {{singlePost.product_price}}</b></p>
                 <h3 ng-bind-html="singlePost.title.rendered | uppercase"></h3>
                 <p ng-bind-html="singlePost.content.rendered "></p>
             </div> 
