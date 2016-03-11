@@ -1,0 +1,26 @@
+<ion-view view-title="{{singlePost.title.rendered | uppercase}}">
+    <ion-nav-buttons side="right">
+        <button style="background-color:#0096d6;" class="button button-icon ion-android-share-alt" ng-click="shareAnywhere()"></button>
+        
+      </ion-nav-buttons> 
+  <ion-content>
+    
+      <div class="">
+      
+        <div>
+            <img class="featured_img" ng-src="{{singlePost.better_featured_image.media_details.sizes.medium_large.source_url}}" width="100%" height="auto">
+            
+          </div> 
+      
+          <div class="card item-text-wrap">
+              
+            <div class="item">
+                <p style="font-style:italic; margin-bottom:10px;"><small>{{singlePost.date | fromNow}}</small></p>
+                <h3 ng-bind-html="singlePost.title.rendered | uppercase"></h3>
+                <p ng-bind-html="singlePost.content.rendered "></p>
+            </div> 
+
+          </div> 
+        
+  </ion-content>
+</ion-view>
